@@ -1,0 +1,18 @@
+<h1>Users!</h1>
+<form method="POST" action="/users/new">
+  <label for="firstName">First Name</label>
+  <input type='text' name="firstName" id="firstName" />
+  <label for="lastName">Last Name</label>
+  <input type='text' name="lastName" id="lastName" />
+  <input type="submit" />
+</form>
+<% users.forEach(user => { %>
+  <div>
+    <h3>
+      <%= user.firstName %> <%= user.lastName %>  
+    </h3>
+    <a href="/users/<%= user.id %>">
+      view profile
+    </a>
+  </div>
+<% }) %>

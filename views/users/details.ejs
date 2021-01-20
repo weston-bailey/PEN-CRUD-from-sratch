@@ -1,0 +1,24 @@
+<div>
+  <h3>
+   Hello <%= user.firstName %> <%= user.lastName %>  
+  </h3>
+</div>
+
+<% user.books.forEach(book => { %>
+  <div>
+    <a href="/books/<%= book.id %>">
+      <%= book.title %>
+    </a>  
+    <p>
+      <%= book.author %>
+    </p>
+  </div>
+<% }) %>
+
+<!-- <form method="POST" action="/users/new">
+  <label for="firstName">First Name</label>
+  <input type='text' name="firstName" id="firstName" />
+  <label for="lastName">Last Name</label>
+  <input type='text' name="lastName" id="lastName" />
+  <input type="submit" />
+</form> -->
